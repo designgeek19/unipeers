@@ -250,7 +250,7 @@ body {
       rgba(0, 0, 0, 0.6), 
       rgba(0, 0, 0, 0.6)
     ),
-    url('images/unsplashimg\ \(1\).jpg');
+    url('images/graduation.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -268,7 +268,7 @@ body.dark-mode .background-layer {
       rgba(0, 0, 0, 0.7), 
       rgba(0, 0, 0, .7)
     ),
-    url('images/unsplashimg\ \(1\).jpg');
+    url('images/graduation.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -315,7 +315,7 @@ body.dark-mode .background-layer {
 
 /* Login Card */
 .login-card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(241, 234, 234, 0.8);
   backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 40px 30px;
@@ -328,13 +328,16 @@ body.dark-mode .background-layer {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #000000;
+  text-align: center;
 }
 
 /* Subtitle */
 .login-subtitle {
   font-size: 1rem;
-  color: #ddd;
+  color: #000000;
   margin-bottom: 25px;
+  text-align: center;
 }
 
 /* Labels */
@@ -342,7 +345,7 @@ body.dark-mode .background-layer {
   display: block;
   margin-bottom: 8px;
   font-size: 0.95rem;
-  color: #eee;
+  color: #000000;
 }
 
 /* Input Field */
@@ -351,7 +354,7 @@ body.dark-mode .background-layer {
   padding: 10px 14px;
   margin-bottom: 20px;
   border: 1px solid #aaa;
-  border-radius: 6px;
+  border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.9);
   color: #333;
   font-size: 1rem;
@@ -364,7 +367,7 @@ body.dark-mode .background-layer {
   background-color: #0077cc;
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.3s;
@@ -382,12 +385,13 @@ body.dark-mode .background-layer {
 }
 
 .divider span {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0 12px;
-  opacity: 100%;
-  color: #bbb;
+  background: rgba(241, 234, 234, 0.8);
+  padding: 0 4px;
+  border-radius: 40px;
+  color: #000000;
   position: relative;
   z-index: 1;
+  backdrop-filter: blur(12px);
 }
 
 .divider::before {
@@ -431,15 +435,17 @@ body.dark-mode .background-layer {
 .signup-cta {
   margin-top: 15px;
   text-align: center;
-  color: #ccc;
+  color: #000000;
   font-size: 0.95rem;
 }
 
 .signup-cta a {
-  color: #66ccff;
+  color: #005fa3;
   text-decoration: none;
 }
 
 .signup-cta a:hover {
-  text-decoration: underline;
+  text-decoration:rgba(101, 22, 175, 0.7);
+  /* color: #6e25ce; */
+  font-weight: bold;
 }
