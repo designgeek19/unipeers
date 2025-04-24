@@ -7,9 +7,16 @@
 
 /* Body Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('images/graduation.png') no-repeat center center/cover;
   color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
 }
 
 /* Navbar Container */
@@ -18,7 +25,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0077cc;
-  padding: 15px 20px;
+  padding: 12px 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 3;
@@ -67,11 +74,26 @@ body {
   gap: 15px;
 }
 
-/* Theme Toggle Icon */
-.icon img {
-  width: 24px;
-  height: 24px;
+body.dark .navbar {
+  background: rgba(30, 30, 30, 0.9);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.2rem;
   cursor: pointer;
+  color: inherit;
 }
 
 /* Hamburger Icon */
@@ -89,47 +111,89 @@ body {
   border-radius: 2px;
 }
 
-/* Hamburger Menu Dropdown */
-.hamburger-menu-content {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  padding: 10px 15px;
-  z-index: 1000;
+/* Backdrop behind the menu */
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+  z-index: 999;
+}
+
+.menu-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Menu sliding from right */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
   width: 220px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -4px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 32px;
+  transition: right 0.6s ease, opacity 0.3s ease;
+  opacity: 0;
 }
 
-.hamburger-menu-content ul {
-  list-style-type: none;
+.menu-overlay.show {
+  right: 0;
+  opacity: 1;
 }
 
-.hamburger-menu-content li {
-  margin-bottom: 10px;
-}
-
-.hamburger-menu-content li:last-child {
-  margin-bottom: 0;
-}
-
-.hamburger-menu-content a {
-  text-decoration: none;
+/* Close icon */
+.close-menu {
+  font-size: 24px;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
   color: #333;
-  font-size: 1rem;
-  transition: color 0.3s ease;
 }
 
-.hamburger-menu-content a:hover {
-  color: #0077cc;
+body.dark .close-menu {
+  color: #f1f1f1;
 }
 
-/* Show Menu When Active */
-.hamburger-menu-content.show {
-  display: block;
+/* Menu items */
+.menu-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items li {
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.2s ease;
+}
+
+.menu-items li:hover {
+  color: #2563eb;
+}
+
+body.dark .menu-overlay {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark .menu-items li:hover {
+  color: #2563eb;
 }
 
 /* Dark Mode Styling */
@@ -173,60 +237,6 @@ body.dark-mode .hamburger-menu-content a:hover {
 
 body.dark-mode .icon i {
   color: #f1f1f1;
-}
-
-/* body.dark-mode .login-section {
-  background-color: #121212;
-  background-size: auto;
-} */
-
-body.dark-mode .login-card {
-  background-color: #1e1e1e;
-  color: #f1f1f1;
-}
-
-body.dark-mode .login-title {
-  color: #66ccff;
-}
-
-body.dark-mode .login-subtitle {
-  color: #aaa;
-}
-
-body.dark-mode .login-label {
-  color: #ddd;
-}
-
-body.dark-mode .login-input {
-  background-color: #2c2c2c;
-  color: #fff;
-  border: 1px solid #555;
-}
-
-body.dark-mode .login-button {
-  background-color: #66ccff;
-  color: #121212;
-  font-weight: bold;
-}
-
-body.dark-mode .divider span {
-  background: #1e1e1e;
-  color: #bbb;
-}
-
-body.dark-mode .divider::before {
-  background: #444;
-}
-
-body.dark-mode .google-button {
-  background-color: #2c2c2c;
-  color: #fff;
-  border: 1px solid #555;
-}
-
-body.dark-mode .bottom-background {
-  opacity: 0.3; /* Reduce visibility */
-  background-color: rgba(0, 0, 0, 0.3); /* Optional dark overlay */
 }
 
 body {
@@ -448,4 +458,120 @@ body.dark-mode .background-layer {
   text-decoration:rgba(101, 22, 175, 0.7);
   /* color: #6e25ce; */
   font-weight: bold;
+}
+
+/* body.dark-mode .login-section {
+  background-color: #121212;
+  background-size: auto;
+} */
+
+body.dark-mode .login-card {
+  background-color: rgba(30, 30, 30, 0.9);
+  color: #f1f1f1;
+  backdrop-filter: blur(12px);
+}
+
+body.dark-mode .login-title {
+  color: #66ccff;
+}
+
+body.dark-mode .login-subtitle {
+  color: #aaa;
+}
+
+body.dark-mode .login-label {
+  color: #ddd;
+}
+
+body.dark-mode .login-input {
+  background-color: #2c2c2c;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .login-button {
+  background-color: #66ccff;
+  color: #121212;
+  font-weight: bold;
+}
+
+body.dark-mode .divider span {
+  background: #1e1e1e;
+  color: #bbb;
+}
+
+body.dark-mode .divider::before {
+  background: #444;
+}
+
+body.dark-mode .google-button {
+  background-color: #2c2c2c;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .bottom-background {
+  opacity: 0.3; /* Reduce visibility */
+  background-color: rgba(0, 0, 0, 0.3); /* Optional dark overlay */
+}
+
+ /* Dark Mode Toggle Switch */
+ .theme-toggle-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #66ccff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.theme-toggle-label {
+  font-size: 0.9rem;
+  margin-left: 8px;
+  color: white;
+}
+
+body.dark .theme-toggle-label {
+  color: #f1f1f1;
 }
