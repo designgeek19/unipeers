@@ -1,0 +1,267 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-image: url(images/college6.jpg); */
+    background-size:cover;
+    position: relative;
+    color: #333;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(43, 16, 78, 0.527), rgba(42, 16, 81, 0.259)),
+                      url(images/college7.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #211951;
+    padding: 1rem 2rem;
+    color: #fff;
+    z-index: 1000; /* Make sure it's on top of other elements */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional: nice touch */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo img.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.login {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.login a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    align-content: center;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #af83ff;
+}
+
+.login-button {
+    background-color: #ffffff;
+    color: #181818;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    margin-right: 80px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #d2affb;
+    font-weight: bold;
+}
+
+/* Registration Container */
+.registration-container {
+    display: flex;
+    margin-top: 80px; /* Adjust based on your navbar height */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 2rem;
+    padding-right: 4rem;
+    padding-left: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-image{
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.registration-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    padding-right: 4rem;
+    width: 500px;
+    z-index: 2;
+    position: relative;
+}
+
+.registration-card h2 {
+    font-size: 1.8rem;
+    color: #211951;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #211951;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+    border-color: #af83ff;
+    outline: none;
+}
+
+.gender-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Profile Photo Upload */
+.profile-photo-upload {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.profile-photo-upload h3 {
+    font-size: 0.1rem;
+    color: #211951;
+    margin-bottom: 1rem;
+}
+
+.upload-box {
+    border: 2px dashed #af83ff;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.upload-box:hover {
+    background-color: #f8f9fa;
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.upload-box p {
+    margin-bottom: 1rem;
+    color: #777;
+}
+
+.upload-button {
+    background-color: #af83ff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #836fff;
+}
+
+/* Complete Registration Button */
+.complete-registration-button {
+    background-color: #211951;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.complete-registration-button:hover {
+    background-color: #1a1442;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .registration-container {
+        padding: 1rem;
+    }
+
+    .registration-card {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
