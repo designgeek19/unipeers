@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniPeers - User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/BrowserLogo.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/MainLogo2.png" alt="UniPeers Logo" class="logo-img">
+            <h1>UniPeers</h1>
+        </div>
+        <div class="nav-links">
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+            <a href="#posts"><i class="fas fa-newspaper"></i> Posts</a>
+            <a href="#events"><i class="fas fa-calendar-alt"></i> Events</a>
+            <a href="#universities"><i class="fas fa-university"></i> Universities</a>
+            <a href="#communities"><i class="fas fa-users"></i> Communities</a>
+        </div>
+        <div class="create-post">
+            <button class="create-button"><i class="fas fa-plus"></i> Create</button>
+        </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="profile-cover">
+            <img src="images/Matrix.jpeg" alt="Cover Photo">
+        </div>
+        <div class="profile-info">
+            <div class="profile-picture">
+                <img src="images/People4.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-details">
+                <h2>Jenifer Adenike Samuel</h2>
+                <p>Computer Science Student at University of Abuja</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <h3>125</h3>
+                        <p>Posts</p>
+                    </div>
+                    <div class="stat">
+                        <h3>458</h3>
+                        <p>Followers</p>
+                    </div>
+                    <div class="stat">
+                        <h3>234</h3>
+                        <p>Following</p>
+                    </div>
+                </div>
+                <button class="follow-button">Follow</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Content -->
+    <div class="profile-container">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="about-section">
+                <h3>About</h3>
+                <p>Passionate about technology and innovation. Currently studying Computer Science with a focus on Artificial Intelligence and Machine Learning.</p>
+                <div class="contact-info">
+                    <h4>Contact Information</h4>
+                    <p><i class="fas fa-envelope"></i> jenifer.samuel@unipeers.com</p>
+                    <p><i class="fas fa-phone"></i> +234 810 031 7566</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria</p>
+                </div>
+                <div class="education-info">
+                    <h4>Education</h4>
+                    <p><strong>University of Abuja</strong></p>
+                    <p>Bachelor of Science in Computer Science</p>
+                    <p>2023 - Present</p>
+                </div>
+
+                <!-- USER CHATROOMS -->
+                            <div class="chat-rooms-section">
+                <h3>Chat Rooms</h3>
+                <div class="chat-room">
+                    <div class="chat-room-info">
+                        <h4>Computer Science Study Group</h4>
+                        <p>15 Members</p>
+                    </div>
+                    <button class="join-button">Join</button>
+                </div>
+                <div class="chat-room">
+                    <div class="chat-room-info">
+                        <h4>AI Enthusiasts</h4>
+                        <p>24 Members</p>
+                    </div>
+                    <button class="join-button">Join</button>
+                </div>
+                <div class="chat-room">
+                    <div class="chat-room-info">
+                        <h4>Book Club</h4>
+                        <p>12 Members</p>
+                    </div>
+                    <button class="join-button">Join</button>
+                </div>
+                <div class="chat-room">
+                    <div class="chat-room-info">
+                        <h4>Math Tutoring</h4>
+                        <p>8 Members</p>
+                    </div>
+                    <button class="join-button">Join</button>
+                </div>
+                <a href="#" class="see-all">See all chat rooms...</a>
+            </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="posts">Posts</button>
+                <button class="tab-button" data-tab="events">Events</button>
+                <button class="tab-button" data-tab="communities">Communities</button>
+            </div>
+
+            <!-- Posts Tab -->
+            <div class="tab-content active" id="posts">
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Profile Picture" class="profile-pic">
+                        <div class="post-info">
+                            <h3>Jenifer Adenike Samuel</h3>
+                            <p>2 hours ago</p>
+                        </div>
+                    </div>
+                    <p class="post-content">Just finished my final project for the Artificial Intelligence course. It was challenging but rewarding!</p>
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Post Image" class="post-image">
+                    <div class="post-actions">
+                        <button class="action-button"><i class="fas fa-thumbs-up"></i> Like <span class="count">479</span></button>
+                        <button class="action-button"><i class="fas fa-comment"></i> Comment <span class="count">125</span></button>
+                        <button class="action-button"><i class="fas fa-share"></i> Share <span class="count">29</span></button>
+                    </div>
+                </div>
+
+                <div class="post">
+                    <div class="post-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Profile Picture" class="profile-pic">
+                        <div class="post-info">
+                            <h3>Jenifer Adenike Samuel</h3>
+                            <p>1 day ago</p>
+                        </div>
+                    </div>
+                    <p class="post-content">Excited to announce that I'll be presenting my research at the upcoming Tech Conference!</p>
+                    <div class="post-actions">
+                        <button class="action-button"><i class="fas fa-thumbs-up"></i> Like <span class="count">234</span></button>
+                        <button class="action-button"><i class="fas fa-comment"></i> Comment <span class="count">45</span></button>
+                        <button class="action-button"><i class="fas fa-share"></i> Share <span class="count">12</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events Tab -->
+            <div class="tab-content" id="events">
+                <div class="event">
+                    <div class="event-header">
+                        <h3>Hackathon 2023</h3>
+                        <p><i class="fas fa-calendar-alt"></i> October 15, 2023</p>
+                    </div>
+                    <p class="event-content">Join us for an exciting hackathon event! Teams will compete to create innovative solutions to real-world problems. Prizes will be awarded to the top teams.</p>
+                    <div class="event-actions">
+                        <button class="action-button"><i class="fas fa-thumbs-up"></i> Like <span class="count">187</span></button>
+                        <button class="action-button"><i class="fas fa-comment"></i> Comment <span class="count">32</span></button>
+                        <button class="action-button"><i class="fas fa-share"></i> Share <span class="count">8</span></button>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <div class="event-header">
+                        <h3>Guest Lecture: Artificial Intelligence</h3>
+                        <p><i class="fas fa-calendar-alt"></i> October 20, 2023</p>
+                    </div>
+                    <p class="event-content">Join us for a guest lecture on Artificial Intelligence by Dr. Jane Smith. Learn about the latest advancements in AI and their applications in various industries.</p>
+                    <div class="event-actions">
+                        <button class="action-button"><i class="fas fa-thumbs-up"></i> Like <span class="count">210</span></button>
+                        <button class="action-button"><i class="fas fa-comment"></i> Comment <span class="count">34</span></button>
+                        <button class="action-button"><i class="fas fa-share"></i> Share <span class="count">10</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Communities Tab -->
+            <div class="tab-content" id="communities">
+                <div class="community">
+                    <div class="community-header">
+                        <h3>Computer Science Study Group</h3>
+                        <p>15 Members</p>
+                    </div>
+                    <p class="community-content">A group for Computer Science students to discuss course materials and work on assignments together.</p>
+                    <div class="community-actions">
+                        <button class="action-button"><i class="fas fa-thumbs-up"></i> Likes <span class="count">1654</span></button>
+                        <button class="action-button"><i class="fas fa-users"></i> Members <span class="count">287</span></button>
+                        <button class="action-button"><i class="fas fa-plus"></i> Join Chatroom</button>
+                    </div>
+                </div>
+
+                <div class="community">
+                    <div class="community-header">
+                        <h3>AI Enthusiasts</h3>
+                        <p>24 Members</p>
+                    </div>
+                    <p class="community-content">A community for students interested in Artificial Intelligence and Machine Learning.</p>
+                    <div class="community-actions">
+                        <button class="action-button"><i class="fas fa-thumbs-up"></i> Likes <span class="count">3507</span></button>
+                        <button class="action-button"><i class="fas fa-users"></i> Members <span class="count">787</span></button>
+                        <button class="action-button"><i class="fas fa-plus"></i> Join Chatroom</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="friends-section">
+                <h3>Friends (2,803)</h3>
+                <div class="friend">
+                    <img src="images/People1.jpg" alt="Friend" class="friend-pic">
+                    <div class="friend-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Harvard University</p>
+                    </div>
+                    <button class="friend-action">Follow</button>
+                </div>
+                <div class="friend">
+                    <img src="images/StidentB.jpg" alt="Friend" class="friend-pic">
+                    <div class="friend-info">
+                        <h4>Michael Brown</h4>
+                        <p>University of Jos</p>
+                    </div>
+                    <button class="friend-action">Follow</button>
+                </div>
+                <div class="friend">
+                    <img src="images/college3.jpg" alt="Friend" class="friend-pic">
+                    <div class="friend-info">
+                        <h4>Emily Davis</h4>
+                        <p>Kwara State University</p>
+                    </div>
+                    <button class="friend-action">Follow</button>
+                </div>
+                                <div class="friend">
+                    <img src="images/dude.jpg" alt="Friend" class="friend-pic">
+                    <div class="friend-info">
+                        <h4>David Adebayo</h4>
+                        <p>University of Lagos</p>
+                    </div>
+                    <button class="friend-action">Follow</button>
+                </div>
+                                <div class="friend">
+                    <img src="images/college5.jpg" alt="Friend" class="friend-pic">
+                    <div class="friend-info">
+                        <h4>Jude Omogie</h4>
+                        <p>Benue State University</p>
+                    </div>
+                    <button class="friend-action">Follow</button>
+                </div>
+                                <div class="friend">
+                    <img src="images/lady1.jpg" alt="Friend" class="friend-pic">
+                    <div class="friend-info">
+                        <h4>Sonia Musa</h4>
+                        <p>FUT Minna</p>
+                    </div>
+                    <button class="friend-action">Follow</button>
+                </div>
+                <a href="#" class="see-all">See all friends...</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Tab Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
